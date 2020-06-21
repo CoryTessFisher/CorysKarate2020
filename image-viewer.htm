@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+<title>Image View</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Copyright" content="Copyright Cory's Karate http://coryskarate.com">
+<meta http-equiv="Content-Language" content="en">
+<meta name="Rating" content="General">
+
+
+
+<link rel="StyleSheet" href="corporatestyle.css" type="text/css">
+<link rel="StyleSheet" href="menu.css" type="text/css">
+
+
+<script language="JavaScript" type="text/javascript" src="javascripts.js"></script>
+<script language="JavaScript" type="text/javascript" src="pop-closeup.js"></script>
+<script language="JavaScript" type="text/javascript" src="mouseover.js"></script>
+
+
+
+<meta http-equiv="imagetoolbar" content="no">
+
+<script language="JavaScript" type="text/javascript">
+<!-- Begin
+var message="You may not right mouse click this page.";
+if (navigator.appName == 'Microsoft Internet Explorer'){
+function NOclickIE(e) {
+if (event.button == 2 || event.button == 3) {
+alert(message);
+return false;
+}
+return true;
+}
+document.onmousedown=NOclickIE;
+document.onmouseup=NOclickIE;
+window.onmousedown=NOclickIE;
+window.onmouseup=NOclickIE;
+}
+else {
+function NOclickNN(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}}}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=NOclickNN; }
+document.oncontextmenu=new Function("alert(message);return false")
+}
+//  End -->
+</script>
+
+
+
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF">
+
+<!-- PAGE TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="left" valign="top" class="tablebackground">
+<a name="top"></a>
+
+
+
+<script language="JavaScript" type="text/javascript" src="header.js"></script>
+
+
+
+<!-- PICTURE TABLE -->
+<table cellpadding="10" cellspacing="0" border="0" width="100%" class="pageheight-viewer"><tr><td align="center" valign="top">
+
+
+
+<br><br><br>
+
+
+
+<!-- CODE THAT DISPLAYS THE GALLERY IMAGE -->
+
+<a href="javascript:history.go(-1)">
+
+<script language="JavaScript" type="text/javascript">
+<!-- // START SCRIPT
+if (location.search.length > 0) {
+document.write('<img src="');
+document.write(location.search.substring(1));
+document.write('" class="viewer-border" alt="Back"><br>');
+}
+//-->
+</script>
+
+</a>
+
+<br>
+
+
+
+<!-- IMAGE TITLE -->
+
+<span class="picturetitle">
+
+<script language="JavaScript" type="text/javascript">
+<!-- // START SCRIPT
+if (location.search.length > 0) {
+//document.write(location.search.substring(1));
+}
+//-->
+</script>
+
+</span>
+
+
+
+<!-- START TEXT TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="500"><tr><td align="left" class="just">
+
+<br>
+<br>
+<br>
+
+</td></tr></table>
+<!-- END TEXT TABLE -->
+
+
+
+<!-- BACK BUTTON -->
+<a href="javascript:history.go(-1)" onMouseOver="img_act('back')" onMouseOut="img_inact('back')"><img name="back" border="0" alt="Back" width="55" height="20" src="picts/general/gallery-back-off.gif"></a><br>
+
+
+
+</td></tr></table>
+<!-- END PICTURE TABLE -->
+
+
+
+
+
+
+
+
+<!--  BOTTOM BAR TABLE AND TOP ARROW -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="printhide"><tr><td class="pagebar-bottom" align="right">
+<a href="#top"><img src="picts/general/arrow-topoff.gif" border="0" alt="Top of Page" hspace="3" vspace="4" onMouseOver="this.src='picts/general/arrow-topon.gif'" onMouseOut="this.src='picts/general/arrow-topoff.gif'"></a><br>
+</td></tr></table>
+
+
+
+
+
+
+<!-- COPYRIGHT -->
+<table cellpadding="0" cellspacing="6" border="0" width="100%" background="picts/general/bottom-shade.gif"><tr><td align="left" valign="middle">
+<script language="JavaScript" type="text/javascript" src="copyright.js"></script>
+</td><td align="right" valign="middle">
+<script language="JavaScript" type="text/javascript" src="copyright-coryskarate.js"></script>
+</td></tr></table>
+<!-- COPYRIGHT -->
+
+
+
+
+</td></tr></table>
+<!-- END PAGE TABLE -->
+
+</body>
+</html>

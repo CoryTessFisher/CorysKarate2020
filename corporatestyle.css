@@ -1,0 +1,355 @@
+body		{
+		background-color: #000000;
+		scrollbar-base-color: #000000;
+		scrollbar-track-color: #000000;
+		scrollbar-face-color: #000000;
+		scrollbar-highlight-color: #3E4150;
+		scrollbar-3dlight-color: #000000;
+		scrollbar-darkshadow-color: #000000;
+		scrollbar-shadow-color: #3E4150;
+		scrollbar-arrow-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	border: #FFFFFF 0px solid;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+  	-ms-user-select: none;      /* IE 10+ */
+  	-o-user-select: none;
+  	user-select: none; 	
+	}
+
+
+
+
+
+/* NON-MENU PAGE LINK CODE */
+
+a:link		{ color: #9999CC; text-decoration: none; }
+
+a:visited	{ color: #9999CC; text-decoration: none; }
+
+a:active	{ color: #9999CC; text-decoration: none; }
+
+a:hover		{ color: #3399FF; text-decoration: underline; }
+
+.biglink 	{ font: 12px verdana, arial, sans-serif; font-weight: bold; font-style: italic; text-decoration: none; }
+
+.biglink:hover 	{ font: 12px verdana, arial, sans-serif; font-weight: bold; font-style: italic; text-decoration: underline; }
+
+
+
+
+
+/* THIS LINE CONTROLS THE FONT SIZE ON ALL PAGES */
+
+table		{ color: #979DAA; font: 12px arial, sans-serif; font-weight: bold; }
+
+.title		{ color: #B2B8C5; font: 21px arial, sans-serif; font-weight: normal; }
+
+.subtitle	{ color: #FFFFFF; font: 14px arial, sans-serif; font-weight: bold; }
+
+.careertitle	{ color: #339999; font: 14px arial, sans-serif; font-weight: bold; }
+
+.phonetitle	{ color: #FFFFFF; font: 13px arial, sans-serif; font-weight: bold; }
+
+.testimonial	{ color: #99FF99; font-weight: bold; font-style: italic; }
+
+.copytext	{ color: #979DAA; font: 9px arial, sans-serif; font-weight: bold; }
+
+.date-font	{ color: #979DAA; font: 10px arial, sans-serif; font-weight: normal; }
+
+#date-location	{ text-align: left; }
+
+
+
+.just 			{ text-align: justify; }
+
+.formmargin		{ margin: 0px; }
+
+.pageheight		{ height: 700px; }
+
+.whitespaceleft		{ width: 12px; }
+
+.whitespaceright	{ width: 50px; }
+
+.contentwidth		{ width: 550px; }
+
+
+
+
+
+/* FONT USED FOR TEXT HEADER IN NON-FLASH BROWSERS */
+
+.NoFlashTitle	{ color: #FFFFFF; font: normal 22px arial, sans-serif; }
+
+
+
+
+
+/* PAGE LINES & BORDERS */
+
+.menuimage-borders	{
+			border: solid #000000;
+			border-width: 1px 0px 1px 0px;
+			/* NOTE: BORDERs ABOVE ARE | top | right | bottom | left */
+			}
+
+.pagebars	{
+		background-color: #393B42;
+		background-image: url("picts/general/bar.jpg");
+		height: 15px;
+		border: solid #000000;
+		border-width: 1px 0px 1px 0px;
+		/* NOTE: BORDERs ABOVE ARE | top | right | bottom | left */
+		}
+
+.pagebar-bottom	{
+		background-color: #393B42;
+		background-image: url("picts/general/bar.jpg");
+		height: 26px;
+		border: solid #000000;
+		border-width: 1px 0px 1px 0px;
+		/* NOTE: BORDERs ABOVE ARE | top | right | bottom | left */
+		}
+
+
+.page-splits	{
+		border: 0px;
+		border-top: #000000 1px solid;
+		background-color: #333333;
+		color: #333333;
+		height: 2px;
+		width: 100%;
+		}
+
+
+
+
+/* IMAGE BORDERS */
+
+.borders		{ border: #43475A 1px solid; }
+
+
+
+
+
+/* HIDE MENU AND ITEMS FOR PRINTING */
+
+
+@media print {
+.printhide 	{ display:none; }
+.printhelp	{ width:600px; }
+}
+@media screen{
+.printonly 	{ display:none; }
+}
+
+
+
+
+
+/* MAIN PAGE TABLE AND IMAGE BACKGROUNDS */
+
+.imagebackground	{ background-color: #000000; }
+
+.tablebackground	{
+			background-color: #000000;
+			background-image: url("picts/general/background.jpg");
+			background-repeat:no-repeat;
+			background-position: top left;
+			}
+
+
+
+
+
+/* GALLERY AND CART BORDERS AND OTHER CODE */
+
+.gallerywidth		{ width: 95%; }
+
+.pageheight-viewer	{ height: 795px; }
+
+.image-border		{ border: #000000 3px solid; position: relative; left: 0px; top: 0px; margin-bottom: 4px; }
+
+.image-borderon		{ border: #000000 3px solid; position: relative; left: 3px; top: 3px; margin-bottom: 4px; }
+
+.viewer-border		{ border: #000000 3px solid; }
+
+.picturecomments	{ color: #979DAA; font: 9px verdana, arial, sans-serif; font-weight: bold; }
+
+.picturetitle 		{ color: #FFFFFF; font: 10px verdana, arial, sans-serif; font-weight: bold; }
+
+
+
+/* CART PAGES */
+
+.price	 	{ color: #CCCC99; font: 12px verdana, arial, sans-serif; font-weight: bold; }
+
+.cartmargin	{ margin: 0px; margin-top: 8px; }
+
+.cartbox	{
+		background-color: #2B2D33;
+		border: #4A4D5F 1px solid;
+		width: 130px;
+		}
+
+
+/* TEMPLATE ORDER BUTTONS */
+
+.button-order	 	{
+			color: #FFFFFF;
+	       		font: bold 13px arial, sans-serif;
+			text-align: center;
+			background-color: #3C57E7;
+	        	background-image: url("picts/general/button-order.gif");
+        		padding: 1px 0px 1px 0px;
+			cursor: pointer;
+			width: 110px;
+        		border: #333399 1px solid;
+			}
+
+
+.buttonon-order	 	{
+			color: #FFFFFF;
+	       		font: bold 13px arial, sans-serif;
+			text-align: center;
+			background-color: #FF7C2C;
+	        	background-image: url("picts/general/buttonon-order.gif");
+        		padding: 1px 0px 1px 0px;
+			cursor: pointer;
+			width: 110px;
+        		border: #CC6600 1px solid;
+			}
+
+
+
+
+
+/* VIDEO PAGES CODE */
+
+/* SEE ALSO "video.css" IN THE "videos-HTML5" FOLDER */
+
+.videoborder		{ border: #444444 1px solid; }
+
+.videoborderTOP		{ border-bottom: #444444 0px solid; }
+
+.videobox		{ border: #445056 1px solid; background-color: #000000; }
+
+.videotitle		{ color: #B2B8C5; font: 19px arial, sans-serif; font-weight: normal; }
+
+.Vborder	{ border: #FFFFFF 1px solid; }
+
+.Vborderon	{ border: #FF0000 1px solid; }
+
+table.videobox td {
+		color: #FFFFFF;
+		background-color:#000000;
+		text-align: center;
+		vertical-align: middle;
+		border-collapse:collapse;
+		padding: 0px;
+		border: #474B49 1px solid;
+		}
+
+
+
+
+
+/* CONTACT PAGE CODE */
+
+.shadeform	{
+		font: 13px arial, sans-serif;
+		color: #FFFFFF;
+		background-color: #787C8B;
+		background-image: url("picts/general/shadeform.gif");
+		text-align: left;
+		width: 210px;
+		border: #000000 1px solid;
+		}
+
+.dropdown 	{
+		background-color: #787C8B;
+		color: #FFFFFF;
+		width: 210px;
+		font: 11px arial, sans-serif;
+		}
+
+.textarea	{
+		font: 13px arial, sans-serif;
+		color: #FFFFFF;
+		background-color: #787C8B;
+		background-image: url("picts/general/shadeform.gif");
+		text-align: left;
+		width: 250px;
+		height: 150px;
+		border: #000000 1px solid;
+		}
+
+.button 	{
+		background-color:#40404E;
+		background-image: url("picts/general/button.gif");
+		font-family: arial, helvetica, sans-serif;
+		color: #FFFFFF;
+		font-size: 11px;
+		cursor:pointer;
+		font-weight: bold;
+		text-align: center;
+		padding: 3px 5px 3px 5px;
+		border: #000000 1px solid;
+		}
+
+
+.buttonon 	{
+		background-color: #494959;
+		background-image: url("picts/general/buttonon.gif");
+		font-family: arial, helvetica, sans-serif;
+		color: #FFFFFF;
+		font-size: 11px;
+		cursor:pointer;
+		font-weight: bold;
+		text-align: center;
+		padding: 3px 5px 3px 5px;
+		border: #333333 1px solid;
+		}
+
+
+
+
+
+/* LINKS PAGE CODE */
+
+.searchform 	{
+		width: 110px;
+		height: 20px;
+		font: 11px arial, helvetica, sans-serif;
+		color: #FFFFFF;
+		background-color: #787C8B;
+		background-image: url("picts/general/shadeform.gif");
+		border: #000000 1px solid;
+		}
+
+.linksmargin	{ margin: 0px; margin-top: 5px; }
+
+.searchbutton 	{
+		background-color:#40404E;
+		background-image: url("picts/general/button.gif");
+		font-family: arial, helvetica, sans-serif;
+		color: #FFFFFF;
+		font-size: 11px;
+		cursor:pointer;
+		font-weight: bold;
+		text-align: center;
+		padding: 2px 2px 2px 2px;
+		border: #000000 1px solid;
+		}
+
+
+
+
+.submit {
+	margin-left:5px;
+	vertical-align:top;
+	}
+	
+.button_row {float:left; width: 100%}
+.button row form {float:left; width: 50%}

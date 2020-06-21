@@ -1,0 +1,3 @@
+logo=Cory's Karate
+&slogan=Teaching Tan Ren Do Karate
+&url=index.htm

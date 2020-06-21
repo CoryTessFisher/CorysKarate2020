@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<!-- CHANGE THE NEXT THREE LINES -->
+
+<title>Payments</title>
+<meta name="Description" content="Cory's Karate: A school teaching the art of Tan Ren Do Karate in Springville Utah.">
+<meta name="KeyWords" content="karate school springville utah shin-toshi martial arts kick punch hit class dojo spar tournament kata kumite">
+
+<!-- CHANGE THE ABOVE THREE LINES -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Copyright" content="Copyright Cory's Karate http://coryskarate.com">
+<meta http-equiv="Content-Language" content="en">
+<meta name="Rating" content="General">
+
+
+
+<link rel="StyleSheet" href="corporatestyle.css" type="text/css">
+<link rel="StyleSheet" href="menu.css" type="text/css">
+
+
+<script language="JavaScript" type="text/javascript" src="javascripts.js"></script>
+<script language="JavaScript" type="text/javascript" src="pop-closeup.js"></script>
+<script language="JavaScript" type="text/javascript" src="mouseover.js"></script>
+
+
+<!-- Start of Script --> 
+<script type="text/javascript">
+<!--
+var maxamt = 9999.00;
+var minamt = 5.00;
+function ChkAmt (obj1) {  // check any qty limits on items
+var amt;
+  amt = obj1.amount.value;
+  if (isNaN (amt)) {
+    alert ("Enter a valid number for amount!");
+    ClrAmt ();            // always clear the values!
+    return false;
+  }
+  
+//  if (amt > maxamt) {
+//    alert ("You cannot order more than " + maxqty + " items!");
+//    ClrQty ();
+//    return false;
+//  }  
+
+  if (amt < minamt) {
+    alert ("Invalid Amount - Minimum purchase total is $" + minamt + ".  Please enter a new value.");
+    ClrAmt ();
+    return false;
+  }
+  ClrAmt ();
+  return true;
+}
+
+function ChkAmtTuition (obj2) {  // check any qty limits on items
+var amt;
+var x = obj2.on1.value;
+    if (x == null || x == "") {
+        alert("Description must be filled out");
+        return false;
+}
+
+
+
+
+function ClrAmt () {  // Clear out the limits
+  maxamt = 9999.00;  //not used unless you want to set some max amount.
+  minamt = 5.00;   //set the minimum amount for a donation
+}
+
+function Dollar (val) {     // force to valid dollar amount
+var str,pos,rnd=0;
+  if (val < .995) rnd = 1;  // for old Netscape browsers
+  str = escape (val*1.0 + 0.005001 + rnd);  // float, round, escape
+  pos = str.indexOf (".");  // should be one, but OK if not
+  if (pos > 0) str = str.substring (rnd, pos + 3);
+  return str;               // return valid string
+}
+//-->
+</script>
+<!-- End of Script --> 
+
+
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF">
+
+<!-- PAGE TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="left" valign="top" class="tablebackground">
+<a name="top"></a>
+
+
+
+<script language="JavaScript" type="text/javascript" src="header.js"></script>
+
+
+
+
+<!-- PICTURE TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="imagebackground"><tr><td align="left" width="750">
+<img src="picts/general/help.jpg" border="0" width="750" height="80" alt="image"><br>
+</td><td align="left" class="printhide">
+<img src="picts/general/top-picture-end.gif" border="0" width="28" height="80" alt="image"><br>
+</td></tr></table>
+
+
+
+
+<!-- BAR TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="printhide"><tr><td class="pagebars">
+<img src="picts/general/spacer.gif" width="10" height="1" alt="image"><br>
+</td></tr></table>
+
+
+
+
+
+<!-- SPLIT TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top" width="15" class="menu-leftspace">
+
+<img src="picts/general/spacer.gif" height="10" width="15" border="0" class="menu-leftspace" alt="image"><br>
+
+</td><td align="center" valign="top" width="198" class="menu-background menuwidth pageheight">
+
+<script language="JavaScript" type="text/javascript" src="menu.js"></script>
+
+</td><td align="center" valign="top" width="10" class="whitespaceleft">
+<img src="picts/general/spacer.gif" height="10" width="10" class="whitespaceleft" border="0" alt="image"><br>
+</td><td align="center" valign="top">
+
+
+
+
+
+
+<!-- TITLE AND DATE TABLE -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="left" valign="top">
+<script language="JavaScript" type="text/javascript" src="date.js"></script>
+<span class="title">Payments<br>
+</span>
+<br>
+</td></tr></table>
+
+
+
+
+
+
+<!-- CONTENT TABLE -->
+<table cellpadding="0" cellspacing="20" border="0" width="550"  align="left" class="contentwidth"><tr><td align="left" valign="top" class="just">
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="G9MEBHADSC92J">
+<h2 class="carttitle">Tuition or Fees  Payment</h2>
+<p>Use this option if  you would like to make a payment for tuition or fees.</p>
+<table>
+<tr><td><input type="hidden" name="on0" value="Tuition Payment">Tuition Payment</td></tr><tr><td><select name="os0">
+	<option value="Standard Tuition">Standard Tuition $83.00 USD</option>
+	<option value="Black Belt Club Tuition">Black Belt Club Tuition $93.00 USD</option>
+	<option value="Black Belt Tuition">Black Belt Tuition $77.50 USD</option>
+	<option value="Black Belt Discount Tuition">Black Belt Discount Tuition $41.50 USD</option>
+	<option value="Registration Fee">Registration Fee $45 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="on1" value="Description">
+        Description:<br>       
+        <textarea style="width:400px;" name="os1" rows="2" cols="80" class="shadeform payform">  </textarea>
+
+
+<div class="button_row">
+<div style="float:left">
+  <input type="submit" name="PaypalPayment3" value="Add to Cart" class="button" onMouseOver="this.className='buttonon'" onMouseOut="this.className='button'" style="width: 127px;">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="3" height="1"></div>
+  </form>
+
+
+<form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="CWPPKPQ83NXPW">
+<input type="hidden" name="display" value="1"> 
+<div style="float:left">
+<input type="submit" name="ViewCart" value="View Cart" class="button" onMouseOver="this.className='buttonon'" onMouseOut="this.className='button'" style="width: 127px;">
+</div>
+</form>
+</div>
+
+<br>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+
+
+
+<div class="page-splits single-splits">&nbsp;<br></div><br>
+
+
+<form name="Recurring" action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="this.target = '_self'; if(!ChkAmtTuition (this)) return false;">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="CWPPKPQ83NXPW">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Recurring Tuition & Fees Payment">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://www.coryskarate.com/paypalsuccess.htm">
+<input type="hidden" name="cancel_return" value="http://www.coryskarate.com/paypalcancel.htm">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribe_SM.gif:NonHosted">
+<h2 class="carttitle">Recurring Tuition Payment</h2>
+<p>Use this option if  you would like to establish an automatic monthly tuition payment through PayPal.</p>
+<table>
+<tr><td><input type="hidden" name="on0" value="Tuition Payment Options">
+  Automatic Tuition Payment Options:</td>
+  <td>Custom amount (if selected).  Use for multiple students at the rates listed:</td>
+</tr><tr><td><select name="os0">
+	<option value="Standard Tuition">Standard Tuition : $83.00 USD - monthly</option>
+	<option value="Black Belt Club Tuition">Black Belt Club Tuition : $93.00 USD - monthly</option>
+	<option value="Black Belt Tuition">Black Belt Tuition : $77.50 USD - monthly</option>
+	<option value="Black Belt Discount Tuition">Black Belt Discount Tuition : $41.50 USD - monthly</option>
+	<option value="Custom Amount">Custom Amount : Enter Amount - monthly</option>
+</select> </td>
+  <td><input type="text" size="10" name="option_amount4" value="" class="shadeform payform"></td>
+</tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="option_select0" value="Standard Tuition">
+<input type="hidden" name="option_amount0" value="83.00">
+<input type="hidden" name="option_period0" value="M">
+<input type="hidden" name="option_frequency0" value="1">
+<input type="hidden" name="option_select1" value="Black Belt Club Tuition">
+<input type="hidden" name="option_amount1" value="93.00">
+<input type="hidden" name="option_period1" value="M">
+<input type="hidden" name="option_frequency1" value="1">
+<input type="hidden" name="option_select2" value="Black Belt Tuition">
+<input type="hidden" name="option_amount2" value="77.50">
+<input type="hidden" name="option_period2" value="M">
+<input type="hidden" name="option_frequency2" value="1">
+<input type="hidden" name="option_select3" value="Black Belt Discount Tuition">
+<input type="hidden" name="option_amount3" value="41.50">
+<input type="hidden" name="option_period3" value="M">
+<input type="hidden" name="option_frequency3" value="1">
+<input type="hidden" name="option_select4" value="Custom Amount">
+<input type="hidden" name="option_period4" value="M">
+<input type="hidden" name="option_frequency4" value="1">
+<input type="hidden" name="option_index" value="0">
+      <input type="hidden" name="on1" value="Description">
+        Description:<br>       
+        <textarea style="width:400px;" name="os1" rows="2" cols="80" class="shadeform payform">  </textarea>      
+  <br>
+<input type="submit" name="PaypalPayment2" value="Start Autopay" class="button" onMouseOver="this.className='buttonon'" onMouseOut="this.className='button'" style="width: 127px;">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="button" name="CancelPaypalPayment2" value="       Disable Autopay       " class="button" onClick="location.href='https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=CWPPKPQ83NXPW';">
+</form>
+
+
+
+
+
+
+
+<div class="page-splits single-splits">&nbsp;<br></div><br>    
+
+
+
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="this.target = '_self'; if(!ChkAmt (this)) return false;">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="CWPPKPQ83NXPW">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Product Purchase">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="products">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="tax_rate" value="6.750">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://www.coryskarate.com/paypalsuccess.htm">
+<input type="hidden" name="cancel_return" value="http://www.coryskarate.com/paypalcancel.htm">
+<input type="hidden" name="shopping_url"value="http://www.coryskarate.com/payments.htm">
+<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+<h2 class="carttitle">Product Payment</h2>
+<p>Use this option if  you would like to purchase a product and pay online. For example:, weapons, uniforms, t-shirts. 6.75% Tax &amp; 3% Handling charges apply.</p>
+<table>
+<tr><td>
+Enter amount:<br>
+<input type="text" name="amount" value="" class="shadeform payform"><br>
+      <input type="hidden" name="on1" value="Description">
+        Description:<br>       
+        <textarea style="width:400px;" name="os1" rows="2" cols="80" class="shadeform payform">  </textarea>
+</td></tr>
+</table>
+
+<div class="button_row">
+<div style="float:left">   
+<input type="submit" name="PaypalPayment" value="Add to Cart" class="button" onMouseOver="this.className='buttonon'" onMouseOut="this.className='button'" style="width: 127px;">
+
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="3" height="1"></div>
+</form>
+
+<form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="CWPPKPQ83NXPW">
+<input type="hidden" name="display" value="1"> 
+<div style="float:left">
+<input type="submit" name="ViewCart" value="View Cart" class="button" onMouseOver="this.className='buttonon'" onMouseOut="this.className='button'" style="width: 127px;">
+</div>
+</form>
+<br>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+
+
+  
+  
+  
+  
+</p></td>
+</tr></table>
+<!-- CONTENT TABLE -->
+
+
+
+</td><td width="30" class="whitespaceright">
+
+<img src="picts/general/spacer.gif" height="10" width="30" class="whitespaceright" border="0" alt="image"><br>
+
+</td></tr></table>
+<!-- SPLIT TABLE -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  BOTTOM BAR TABLE AND TOP ARROW -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="printhide"><tr><td class="pagebar-bottom" align="right">
+<a href="#top"><img src="picts/general/arrow-topoff.gif" border="0" alt="Top of Page" hspace="3" vspace="4" onMouseOver="this.src='picts/general/arrow-topon.gif'" onMouseOut="this.src='picts/general/arrow-topoff.gif'"></a><br>
+</td></tr></table>
+
+
+
+
+
+
+<!-- COPYRIGHT -->
+<table cellpadding="0" cellspacing="6" border="0" width="100%" background="picts/general/bottom-shade.gif"><tr><td align="left" valign="middle">
+<script language="JavaScript" type="text/javascript" src="copyright.js"></script>
+</td><td align="right" valign="middle">
+<script language="JavaScript" type="text/javascript" src="copyright-coryskarate.js"></script>
+</td></tr></table>
+<!-- COPYRIGHT -->
+
+
+
+
+</td></tr></table>
+<!-- END PAGE TABLE -->
+
+</body>
+</html>
