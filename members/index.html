@@ -117,12 +117,12 @@ div.vertical {
 
 
 	$("#loginbutton").on("click", function() {
-		loadPage($("Replace0").val());
+		loadPage($("#password").val());
 	});
 	$("#password").keypress(function(e) {
 		if (e.which == 13) {
 
-			loadPage($("Replace1").val());
+			loadPage($("#password").val());
 		}
 	});
 	$("#password").focus();
