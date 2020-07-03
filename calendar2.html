@@ -25,7 +25,9 @@
 <script language="JavaScript" type="text/javascript" src="pop-closeup.js"></script>
 <script language="JavaScript" type="text/javascript" src="mouseover.js"></script>
 
-
+<link rel = "stylesheet" type = "text/css" href = "calendar.css">
+<link rel = "stylesheet" type = "text/css" href = "calendarPrint.css" media = "print" />
+<script src="https://apis.google.com/js/api.js"></script>
 
 </head>
 
@@ -106,11 +108,27 @@
 <iframe src="https://calendar.google.com/calendar/b/2/embed?height=800&amp;wkst=1&amp;bgcolor=%23616161&amp;ctz=America%2FDenver&amp;src=Y29yeUBjb3J5c2thcmF0ZS5jb20&amp;color=%23616161&amp;showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="border:solid 1px #777" width="550" height="800" frameborder="0" scrolling="no"></iframe>
 <br>
 
-<script language="JavaScript" type="text/javascript" src="calendar.js"></script>
-
-<script type="text/javascript" src=calendar.js"></script>
-<iframe id="apiproxy7cb4899a10a539d6adf0419b1b2cfc313c7bf93b0.371811888" name="apiproxy7cb4899a10a539d6adf0419b1b2cfc313c7bf93b0.371811888" src="https://content.googleapis.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.yyhByYeMTAc.O%2Fam%3DwQc%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCN9qAMm_5_ztFCxaPySR5cb8QjKkw%2Fm%3D__features__#parent=https%3A%2F%2Fmuffininc.org&amp;rpctoken=794042521" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe>
-
+<div id = "calendarBox">
+      <div id = "calendar">
+        <div id = "calendarHeader">
+          <h1 id = "calendarTitleText">Cory's Karate</h1>
+          <h1 id = "calendarMonthText"></h1>
+          <ul id = "calendarHeaderText"></ul>
+        </div>
+        <ul id = columnHeaders>
+          <li><h1>Sun</h1></li>
+          <li><h1>Mon</h1></li>
+          <li><h1>Tue</h1></li>
+          <li><h1>Wed</h1></li>
+          <li><h1>Thu</h1></li>
+          <li><h1>Fri</h1></li>
+          <li><h1>Sat</h1></li>
+        </ul>
+        <div id = "calendarDates"></div>
+      </div>
+    </div>
+    
+    
 </p>
 <hr class="page-splits">
 <BR>
@@ -182,4 +200,7 @@
 <!-- END PAGE TABLE -->
 
 </body>
+
+<script type = "text/javascript" src = "calendar.js"></script>
+
 </html>
