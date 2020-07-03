@@ -8,7 +8,7 @@
 
 body * 
 { 
-	display: none;
+	/*display: none; */
 } 
 
 /* Box the calendar is contained within */

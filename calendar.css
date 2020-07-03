@@ -177,7 +177,21 @@
 	word-wrap: break-word;
 }
 
+/* Div that holds the text for an event */
 .eventText
 {
 	margin: 0 2% 5% 2%;
+}
+
+/* The buttons for navigating the calendar */
+.calNavButtons
+{
+	display: inline-block;
+	margin-left: 19.25%;
+}
+
+/* A singular buttons for navigating the calendar */
+.calNavButton
+{
+	display: inline-block;
 }
