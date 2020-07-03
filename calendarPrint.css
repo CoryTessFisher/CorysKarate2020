@@ -8,9 +8,7 @@
 
 body * 
 { 
-	/* display: none; */
-	width: 0;
-	height: 0;
+	display: none;
 } 
 
 /* Box the calendar is contained within */
