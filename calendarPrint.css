@@ -1,0 +1,230 @@
+/* Everything */
+* 
+{
+	/* Makes the calendar background image visable when printing */
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;                 /*Firefox*/
+}
+
+body * 
+{ 
+	display: none;
+} 
+
+/* Box the calendar is contained within */
+#calendarBox
+{
+	display: contents;
+	position: relative;
+	width: 100%; /* This has to be set to 100% minis the margin for the calendar to scale correctly */
+	border-width: .25vw .25vw 0 .25vw;
+	border-color: black;
+	border-style: solid;
+}
+
+/* Sets calender height in relation to width */
+#calendarBox:before 
+{
+	content: "";
+	display: block;
+	padding-top: 75%; 	/* Height of calendar in relation to width */
+}
+
+/* Places the calendar in the correct part of the calendar box */
+#calendar
+{
+	border-width: .25vw .25vw 0 .25vw;
+	border-color: black;
+	border-style: solid;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+    position: absolute;
+    top:      0;
+    left:     0;
+    bottom:   0;
+    right:    0;
+    background-image: url("calendarBackground.jpg");
+    background-size: 100%;
+}
+
+/* Text at the top of the calendar (Cory's Karate)*/
+#calendarTitleText
+{
+	display: block;
+	margin: 0;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+/* The month and year at the top of the calendar */
+#calendarMonthText
+{
+	display: block;
+	margin: 0;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+#calendarHeader
+{
+	display: block;
+}
+
+/* Containing box for text that is contained in the header of the calendar */
+#calendarHeaderText
+{
+	display: block;
+	margin: 0;
+	padding: 1% 3% 1% 3%;
+	list-style-type: disc;
+	font-size: 1vw;
+}
+
+/* Text that is contained in the header of the calendar */
+#calendarHeaderText > li
+{
+	list-style-type: disc;
+	display: list-item;
+	margin-bottom: .5%;
+	font-size: 1vw;
+}
+
+
+/* Text that is contained in the header of the calendar and is bold */
+#calendarHeaderText > li > b
+{
+	display: inline-block;
+	font-size: 1vw;
+}
+
+/* Text that is contained in the header of the calendar and is Italic */
+#calendarHeaderText > li > i
+{
+	display: inline-block;
+	font-size: 1vw;
+}
+
+/* Last piece of header text */
+#calendarHeaderText > li:last-child
+{
+	display: list-item;
+	margin-bottom: 0%;
+	font-size: 1vw;
+}
+
+
+/* The header bar at the top of a calendar column that lists the day of the week */
+#columnHeaders
+{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	text-align: center;
+	background-color: rgba(69,69,69,.5); /* nice,nice,nice,.5 */
+	font-weight: bold;
+	font-size: 1.5vw;
+}
+
+/* Each individual column Header */
+#columnHeaders li
+{
+	text-align: center;
+	display: flex;
+	border-width: .25vw .25vw .25vw 0;
+	border-style: solid;
+	border-color: black;
+	list-style: none;
+	flex-grow: 1;
+	width: 0; /* Makes box not scale in relation to inner text size */
+}
+
+/* The last column header */
+#columnHeaders > li:last-child
+{
+	display: flex;
+	border-width: .25vw 0 .25vw 0;
+}
+
+/* The text in the column headers */
+#columnHeaders > li > h1
+{
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+/* The section of the calendar with the date boxes */
+#calendarDates
+{
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Each row of dates */
+.calendarRow
+{
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+/* Each day */
+.calendarRow  > li
+{
+	display: block;
+	border-width: 0 .25vw .25vw 0;
+	border-style: solid;
+	border-color: black;
+	list-style: none;
+	flex-grow: 1;
+	width: 0; /* Makes box not scale in relation to inner text size */
+}
+
+/* The last column of dates */
+.calendarRow  > li:last-child
+{
+	display: block;
+	border-width: 0 0 .25vw 0;
+}
+
+/* The number that lists what the date is */
+.calendarRow > li > h1
+{
+	display: block;
+	font-size: 1vw;
+	margin: .5vw;
+	padding: 0;
+	text-decoration: underline;
+	word-wrap: break-word;
+}
+
+/* The text listing what event is happening that day (Strikes, Blocks, Kicks!) */
+.eventText > h2
+{
+	display: block !important;
+	text-align: center;
+	font-size: 1vw;
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+}
+
+.eventText
+{
+	margin: 0 .5%;
+	display: block;
+	margin-bottom: 1%;
+}
