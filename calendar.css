@@ -1,10 +1,10 @@
 /* Box the calendar is contained within */
 #calendarBox
 {
-	margin: 5%; /* Spacing between the calender and other elements of the page */
+	margin: 0%; /* Spacing between the calender and other elements of the page */
 	position: relative;
-	width: 90%; /* This has to be set to 100% minis the margin for the calendar to scale correctly */
-	border-width: .25vw .25vw 0 .25vw;
+	width: 100%; /* This has to be set to 100% minis the margin for the calendar to scale correctly */
+	border-width: .15vw .15vw 0 .15vw;
 	border-color: black;
 	border-style: solid;
 }
@@ -14,7 +14,7 @@
 {
 	content: "";
 	display: block;
-	padding-top: 75%; 	/* Height of calendar in relation to width */
+	padding-top: 125%; 	/* Height of calendar in relation to width */
 }
 
 /* Places the calendar in the correct part of the calendar box */
@@ -36,17 +36,19 @@
 /* Text at the top of the calendar (Cory's Karate)*/
 #calendarTitleText
 {
+	color: black;
 	margin: 0;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: .75vw;
 }
 
 /* The month and year at the top of the calendar */
 #calendarMonthText
 {
+	color: black;
 	margin: 0;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: .75vw;
 }
 
 /* Containing box for text that is contained in the header of the calendar */
@@ -55,21 +57,23 @@
 	margin: 0;
 	padding: 1% 3% 1% 3%;
 	list-style-type: disc;
-	font-size: 1vw;
+	font-size: .5vw;
+	overflow-y: scroll;
+	max-height: 7vw;
 }
 
 /* Text that is contained in the header of the calendar */
 #calendarHeaderText > li
 {
 	margin-bottom: .5%;
-	font-size: 1vw;
+	font-size: .5vw;
 }
 
 /* Last piece of header text */
 #calendarHeaderText > li:last-child
 {
 	margin-bottom: 0%;
-	font-size: 1vw;
+	font-size: .5vw;
 }
 
 
@@ -82,13 +86,14 @@
 	text-align: center;
 	background-color: rgba(69,69,69,.5); /* nice,nice,nice,.5 */
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: .75vw;
 }
 
 /* Each individual column Header */
 #columnHeaders li
 {
-	border-width: .25vw .25vw .25vw 0;
+	font-size: .75vw;
+	border-width: .15vw .15vw .15vw 0;
 	border-style: solid;
 	border-color: black;
 	list-style: none;
@@ -99,16 +104,17 @@
 /* The last column header */
 #columnHeaders > li:last-child
 {
-	border-width: .25vw 0 .25vw 0;
+	border-width: .15vw 0 .15vw 0;
 }
 
 /* The text in the column headers */
 #columnHeaders > li > h1
 {
+	color: black;
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: .75vw;
 }
 
 /* The section of the calendar with the date boxes */
@@ -137,7 +143,7 @@
 /* Each day */
 .calendarRow  > li
 {
-	border-width: 0 .25vw .25vw 0;
+	border-width: 0 .15vw .15vw 0;
 	border-style: solid;
 	border-color: black;
 	list-style: none;
@@ -148,14 +154,14 @@
 /* The last column of dates */
 .calendarRow  > li:last-child
 {
-	border-width: 0 0 .25vw 0;
+	border-width: 0 0 .15vw 0;
 }
 
 /* The number that lists what the date is */
 .calendarRow > li > h1
 {
-	font-size: 1vw;
-	margin: .5vw;
+	font-size: .5vw;
+	margin: .25vw 0 .2vw .25vw;
 	padding: 0;
 	text-decoration: underline;
 	word-wrap: break-word;
@@ -165,7 +171,7 @@
 .eventText > h2
 {
 	text-align: center;
-	font-size: 1vw;
+	font-size: .4vw;
 	margin: 0;
 	padding: 0;
 	word-wrap: break-word;
@@ -173,5 +179,5 @@
 
 .eventText
 {
-	margin-bottom: 1%;
+	margin: 0 2% 5% 2%;
 }

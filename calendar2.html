@@ -85,9 +85,7 @@
 <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="left" valign="top">
 <script language="JavaScript" type="text/javascript" src="date.js"></script>
 <span class="title"> Calendar
-<br>
 </span>
-<br>
 </td></tr></table>
 
 
@@ -96,15 +94,15 @@
 
 
 <!-- CONTENT TABLE -->
-<table cellpadding="0" cellspacing="20" border="0" width="550"  align="left" class="contentwidth"><tr>
+<table cellpadding="0" cellspacing="10" border="0" width="550"  align="left" class="contentwidth"><tr>
   <td align="left" valign="top" class="just">
 
 
 
 <p align="right">
 
-<br>
-
+<button onclick = "LastMonth()">Last Month</button>
+<button onclick = "NextMonth()">Next Month</button>
 <div id = "calendarBox">
       <div id = "calendar">
         <div id = "calendarHeader">
@@ -112,7 +110,7 @@
           <h1 id = "calendarMonthText"></h1>
           <ul id = "calendarHeaderText"></ul>
         </div>
-        <ul id = columnHeaders>
+        <ul id = "columnHeaders">
           <li><h1>Sun</h1></li>
           <li><h1>Mon</h1></li>
           <li><h1>Tue</h1></li>
@@ -128,7 +126,7 @@
     
 </p>
 <hr class="page-splits">
-<BR>
+<br>
 <br>
 <p><br>
   <br>
