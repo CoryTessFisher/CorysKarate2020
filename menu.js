@@ -47,7 +47,7 @@ document.write('  </li>');
 document.write('  <li class="menuT"><a href="/classes.htm">Classes</a>'); 
 document.write('    <ul id="sub-nav">');
 document.write('      <li><a href="/schedule.shtml">Schedule</a></li>');
-document.write('      <li><a href="/calendar.htm">Calendar</a></li>');
+document.write('      <li><a href="http://coryskarate.com/calendar.htm">Calendar</a></li>');
 document.write('    </ul>');
 document.write('  </li>');
 
