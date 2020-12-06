@@ -6,10 +6,10 @@
     color-adjust: exact !important;                 /*Firefox*/
 }
 
-body * 
-{ 
-	display: none;
-} 
+table
+{
+	display: contents;
+}
 
 /* Box the calendar is contained within */
 #calendarBox
