@@ -380,7 +380,7 @@ function CreateRow()
 /* - - - - - - - - - - Functions that return a value - - - - - - - - - - */
 
 //The number of days at the beginning of the current months calendar that should be blank
-function NumberOfBlankDays() { return (new Date(year + "-" + month + "-01").getDay()); }
+function NumberOfBlankDays() { return (new Date(year, month-1, 1).getDay()); }
 
 //The number of days in the current month
 function NumOfDaysInMonth() { return new Date(year, month, 0).getDate(); }
