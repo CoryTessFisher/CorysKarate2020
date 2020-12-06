@@ -160,7 +160,15 @@ table		{ color: #979DAA; font: 12px arial, sans-serif; font-weight: bold; }
 			}
 
 
+/* Event Page */
 
+ul{
+	text-align: left;
+}
+
+ul > li{
+	padding: 5px 0;
+}
 
 
 /* GALLERY AND CART BORDERS AND OTHER CODE */

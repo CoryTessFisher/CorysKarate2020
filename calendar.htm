@@ -25,7 +25,9 @@
 <script language="JavaScript" type="text/javascript" src="pop-closeup.js"></script>
 <script language="JavaScript" type="text/javascript" src="mouseover.js"></script>
 
-
+<link rel = "stylesheet" type = "text/css" href = "calendar.css">
+<link rel = "stylesheet" type = "text/css" href = "calendarPrint.css" media = "print" />
+<script src="https://apis.google.com/js/api.js"></script>
 
 </head>
 
@@ -83,12 +85,12 @@
 <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="left" valign="top">
 <script language="JavaScript" type="text/javascript" src="date.js"></script>
 <span class="title"> Calendar
-<br>
+	<div class = "calNavButtons">
+		<button onclick = "LastMonth()" class = "calNavButton">Last Month</button>
+		<button onclick = "NextMonth()" class = "calNavButton">Next Month</button>
+	</div>
 </span>
-<br>
-	
 </td></tr></table>
-	
 
 
 
@@ -96,52 +98,36 @@
 
 
 <!-- CONTENT TABLE -->
-<table cellpadding="0" cellspacing="20" border="0" width="550"  align="left" class="contentwidth"><tr>
+<table cellpadding="0" cellspacing="10" border="0" width="550"  align="left" class="contentwidth"><tr>
   <td align="left" valign="top" class="just">
 
 
 
 <p align="right">
-
-
-
-<iframe src="http://www.tanrendokarate.com/cgi-bin/calendar/cal.pl" style="border:solid 1px #777" width="550" height="800" frameborder="0" scrolling="no"></iframe>
-<br>
-<br>
-
-<a href="http://www.tanrendokarate.com/cgi-bin/calendar/basic_admin.pl" Target=blank><img src="picts/general/key.gif" alt="Edit" width="31" height="15"></a>
-
+<div id = "calendarBox">
+      <div id = "calendar">
+        <div id = "calendarHeader">
+          <h1 id = "calendarTitleText">Cory's Karate</h1>
+          <h1 id = "calendarMonthText"></h1>
+          <ul id = "calendarHeaderText"></ul>
+        </div>
+        <ul id = "columnHeaders">
+          <li><h1>Sun</h1></li>
+          <li><h1>Mon</h1></li>
+          <li><h1>Tue</h1></li>
+          <li><h1>Wed</h1></li>
+          <li><h1>Thu</h1></li>
+          <li><h1>Fri</h1></li>
+          <li><h1>Sat</h1></li>
+        </ul>
+        <div id = "calendarDates"></div>
+      </div>
+    </div>  
 </p>
-<hr class="page-splits">
-<BR>
-<br>
-<p><br>
-  <br>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <br>
-  <br>
-</p></td></tr></table>
+</td></tr></table>
 <!-- CONTENT TABLE -->
 
 
-
-</td><td width="30" class="whitespaceright">
-
-<img src="picts/general/spacer.gif" height="10" width="30" class="whitespaceright" border="0" alt="image"><br>
 
 </td></tr></table>
 <!-- SPLIT TABLE -->
@@ -182,4 +168,7 @@
 <!-- END PAGE TABLE -->
 
 </body>
+
+<script type = "text/javascript" src = "calendar.js"></script>
+
 </html>

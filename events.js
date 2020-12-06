@@ -28,9 +28,7 @@ SetCurrentMonthAndYear();
 //Runs when the page has finished loading
 function pageFullyLoaded(e) 
 {
-	console.log("sadf");
     LoadCalendarArray();
-	console.log("this ran");
 }
 
 
