@@ -72,6 +72,7 @@ document.write('  <li class="menuT"><a href="/students.htm">Students</a>');
 document.write('    <ul id="sub-nav">');
 document.write('      <li><a href="/leadershipteam.htm">Leadership Team</a></li>');
 document.write('      <li><a href="/upperranks.htm">Upper Ranks</a></li>');
+document.write('      <li><a href="/demoteam.htm">Demo Team</a></li>');
 document.write('      <li><a href="/members.htm">Student Resources</a></li>');
 document.write('    </ul>');
 document.write('  </li>');
