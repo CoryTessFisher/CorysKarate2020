@@ -12,7 +12,7 @@ document.write('474 North 450 East<br>');
 
 document.write('Springville, UT 84663<br>');
 
-document.write('PHONE: <span class="phonetitle">(801) 491-7228<br></span>');
+document.write('<span class="phonetitle">(801) 491-7228<br></span>');
 
 document.write('<br>');
 
