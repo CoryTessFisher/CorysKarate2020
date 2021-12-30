@@ -95,7 +95,6 @@ document.write('  <li class="menuT"><a href="/site_map.htm">Help &amp; Informati
 document.write('    <ul id="sub-nav">');
 document.write('      <li><a href="/site_map.htm">Site Map</a></li>');
 document.write('      <li><a href="/pricing.htm">Pricing</a></li>');
-document.write('      <li><a href="/payments.htm">Payments</a></li>');
 document.write('      <li><a href="/privacy.htm">Privacy Policy</a></li>');
 document.write('    </ul>');
 document.write('  </li>');
