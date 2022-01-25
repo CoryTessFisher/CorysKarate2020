@@ -2,8 +2,8 @@
 * 
 {
 	/* Makes the calendar background image visable when printing */
-    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
-    color-adjust: exact !important;                 /*Firefox*/
+	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+	color-adjust: exact !important;                 /*Firefox*/
 }
 
 table
@@ -39,37 +39,49 @@ table
 	margin: 0;
 	padding: 0;
 	display: flex;
+	align-content: flex-end;
 	flex-direction: column;
-    position: absolute;
-    top:      0;
-    left:     0;
-    bottom:   0;
-    right:    0;
-    background-image: url("picts/general/calendarBackground.jpg");
-    background-size: 100%;
+	position: absolute;
+	top:      0;
+	left:     0;
+	bottom:   0;
+	right:    0;
+	background-image: url("picts/general/calendarBackground.jpg");
+	background-size: 100%;
 }
 
 /* Text at the top of the calendar (Cory's Karate)*/
 #calendarTitleText
 {
 	display: block;
+	width: 100%;
 	margin: 0;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 2vw;
 }
 
 /* The month and year at the top of the calendar */
 #calendarMonthText
 {
 	display: block;
+	width: 100%;
 	margin: 0;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 2vw;
+}
+
+#calendarHeaderContainer
+{
+	align-content: flex-end;
+	display: flex;
 }
 
 #calendarHeader
 {
+	width: 100%;
 	display: block;
+	overflow: visible;
+	padding-bottom: 0px;
 }
 
 /* Containing box for text that is contained in the header of the calendar */
@@ -79,39 +91,41 @@ table
 	margin: 0;
 	padding: 1% 3% 1% 3%;
 	list-style-type: disc;
-	font-size: 1vw;
+	font-size: 2vw;
+	overflow: visible !important;
 }
+
 
 /* Text that is contained in the header of the calendar */
 #calendarHeaderText > li
 {
 	list-style-type: disc;
 	display: list-item;
-	margin-bottom: .5%;
-	font-size: 1vw;
+	margin-bottom: .05%;
+	font-size: 1.5vw;
+	overflow: visible !important;
 }
-
 
 /* Text that is contained in the header of the calendar and is bold */
 #calendarHeaderText > li > b
 {
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 1.5vw;
 }
 
 /* Text that is contained in the header of the calendar and is Italic */
 #calendarHeaderText > li > i
 {
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 1.5vw;
 }
 
 /* Last piece of header text */
 #calendarHeaderText > li:last-child
 {
 	display: list-item;
-	margin-bottom: 0%;
-	font-size: 1vw;
+	margin-bottom: auto;
+	font-size: 1.5vw;
 }
 
 
@@ -161,7 +175,7 @@ table
 /* The section of the calendar with the date boxes */
 #calendarDates
 {
-	flex-grow: 1;
+	flex-grow: 2;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -191,6 +205,7 @@ table
 	list-style: none;
 	flex-grow: 1;
 	width: 0; /* Makes box not scale in relation to inner text size */
+	background-color: transparent !important; /* Stops highlighting from showing up on the printed version */
 }
 
 /* The last column of dates */
@@ -204,7 +219,7 @@ table
 .calendarRow > li > h1
 {
 	display: block;
-	font-size: 1vw;
+	font-size: 2vw;
 	margin: .5vw;
 	padding: 0;
 	text-decoration: underline;
@@ -216,7 +231,7 @@ table
 {
 	display: block !important;
 	text-align: center;
-	font-size: 1vw;
+	font-size: 1.75vw;
 	margin: 0;
 	padding: 0;
 	word-wrap: break-word;
