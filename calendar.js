@@ -1,4 +1,4 @@
-//Copyright Cory's Karate LLC 2022, All Rights Reserved
+//Copyright Cory's Karate LLC 2020, All Rights Reserved
 
 /* - - - - - - - - - - Variables! - - - - - - - - - - */
 
@@ -75,7 +75,7 @@ function DateFromDateStamp(dateStamp)
 	var outputObject = new Date();
 	var dateArray = dateStamp.split("-");
 	outputObject.setFullYear(dateArray[0]);
-	outputObject.setMonth(dateArray[1]);
+	outputObject.setMonth(dateArray[1] - 1);
 	outputObject.setDate(dateArray[2]);
 	return (outputObject);
 }
@@ -184,6 +184,7 @@ function LabelDates()
 			dateNumber++;
 		}
 	}
+	if (month - 1 == CurrentDate().getMonth()) {HighlightCurrentDate();}
 }
 
 //Populates the calendar with the data from google calendars
@@ -195,7 +196,7 @@ function PopulateCalendarData()
 		{
 			if (calendarData.items[i].description !== undefined) 
 			{
-				CreateHeaderText(calendarData.items[i].description.split("<br>"));
+				CreateHeaderText(calendarData.items[i].description.split(/\n|<br>/));
 			}
 			if (calendarData.items[i].start.date !== undefined)
 			{
@@ -261,7 +262,16 @@ function CreateEventWithTime(eventData)
 		eventText.push(summaryText);
 	}
 	eventText.push(StringFromTimeStamps(eventData.start.dateTime, eventData.end.dateTime));
-	AddEvent(eventText, position[1], position[0])
+	AddEvent(eventText, position[1], position[0]);
+}
+
+//Highlights current date
+function HighlightCurrentDate()
+{
+	var positionOfCurrentDate = DateToRowAndColumn(CurrentDate());
+	HightlightDate(positionOfCurrentDate[1],positionOfCurrentDate[0]);
+	console.log(CurrentDate());
+	console.log(DateToRowAndColumn(CurrentDate()));
 }
 
 
@@ -328,7 +338,7 @@ function SetDateText(text, row, column)
 	rows[row][column].appendChild(theText);
 }
 
-//Places date text on a calendar day
+//Places event text on a calendar day
 function AddEvent(text, row, column)
 {
 	//Changing 1 based coordinates to zero based coordinates
@@ -373,6 +383,17 @@ function CreateRow()
 	rows.push(rowArray);
 }
 
+//Changes the background color of selected date to yellow
+function HightlightDate(row, column)
+{
+	//Changing 1 based coordinates to zero based coordinates
+	row -= 1;
+	column -= 1;
+
+	// changing background color
+	rows[row][column].style.backgroundColor = "#f1e740";
+}
+
 
 
 
@@ -380,7 +401,7 @@ function CreateRow()
 /* - - - - - - - - - - Functions that return a value - - - - - - - - - - */
 
 //The number of days at the beginning of the current months calendar that should be blank
-function NumberOfBlankDays() { return (new Date(year + "-" + month + "-01").getDay()); }
+function NumberOfBlankDays() { return (new Date(year, month-1, 1).getDay()); }
 
 //The number of days in the current month
 function NumOfDaysInMonth() { return new Date(year, month, 0).getDate(); }
@@ -403,6 +424,9 @@ function DateToRowAndColumn(dateObject)
 	return (positionArray);
 }
 
+//Returns a date object with the current date
+function CurrentDate() {return new Date();}
+
 
 
 
@@ -413,7 +437,6 @@ function DateToRowAndColumn(dateObject)
 function pageFullyLoaded(e) 
 {
     LoadCalendarArray();
-    
 }
 
 
