@@ -1,4 +1,4 @@
-//Copyright Cory's Karate LLC 2020, All Rights Reserved
+//Copyright Cory's Karate LLC 2022, All Rights Reserved
 
 /* - - - - - - - - - - Variables! - - - - - - - - - - */
 
