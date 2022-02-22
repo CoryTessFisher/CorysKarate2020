@@ -15,7 +15,7 @@
 {
 	content: "";
 	display: block;
-	padding-top: 75%; 	/* Height of calendar in relation to width */
+	padding-top: 125%; 	/* Height of calendar in relation to width */
 }
 
 /* Places the calendar in the correct part of the calendar box */
@@ -30,7 +30,7 @@
     left:     0;
     bottom:   0;
     right:    0;
-    background-image: url("calendarBackground.jpg");
+    background-image: url("picts/general/calendarBackground.jpg");
     background-size: 100%;
 }
 
