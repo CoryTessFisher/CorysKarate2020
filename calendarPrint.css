@@ -3,23 +3,22 @@
 {
 	/* Makes the calendar background image visable when printing */
 	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
-	color-adjust: exact !important;                 /*Firefox*/
+	color-adjust: exact !important;                 /* Firefox */
+	display: contents;                              /* Hides everything without an expicitly stated display attribute */
 }
 
-table
-{
-	display: contents;
-}
+/* Overriding display settings for things that were still showing up */
+title { display: none; }
+span { display: none; }
+.menu-background { display: none; }
+
 
 /* Box the calendar is contained within */
 #calendarBox
 {
-	display: contents;
-	position: relative;
-	width: 100%; /* This has to be set to 100% minis the margin for the calendar to scale correctly */
-	border-width: .25vw .25vw 0 .25vw;
-	border-color: black;
-	border-style: solid;
+	display: contents !important;
+	position: fixed;
+	width: 100%; /* This has to be set to 100% minus the margin for the calendar to scale correctly */
 }
 
 /* Sets calender height in relation to width */
@@ -33,7 +32,7 @@ table
 /* Places the calendar in the correct part of the calendar box */
 #calendar
 {
-	border-width: .25vw .25vw 0 .25vw;
+	border-width: .3vw !important;
 	border-color: black;
 	border-style: solid;
 	margin: 0;
@@ -41,11 +40,7 @@ table
 	display: flex;
 	align-content: flex-end;
 	flex-direction: column;
-	position: absolute;
-	top:      0;
-	left:     0;
-	bottom:   0;
-	right:    0;
+	position: fixed;
 	background-image: url("picts/general/calendarBackground.jpg");
 	background-size: 100%;
 }
@@ -57,25 +52,28 @@ table
 	width: 100%;
 	margin: 0;
 	text-align: center;
-	font-size: 2vw;
+	font-size: 1.75vw;
 }
 
 /* The month and year at the top of the calendar */
 #calendarMonthText
 {
+
 	display: block;
 	width: 100%;
 	margin: 0;
 	text-align: center;
-	font-size: 2vw;
+	font-size: 1.5vw;
 }
 
+/* Containing box for the calendar header */
 #calendarHeaderContainer
 {
 	align-content: flex-end;
 	display: flex;
 }
 
+/* The calendar header */
 #calendarHeader
 {
 	width: 100%;
@@ -87,11 +85,11 @@ table
 /* Containing box for text that is contained in the header of the calendar */
 #calendarHeaderText
 {
+	color: #303030;
 	display: block;
 	margin: 0;
-	padding: 1% 3% 1% 3%;
+	padding: .5% 2.5% .5% 2.5%;
 	list-style-type: disc;
-	font-size: 2vw;
 	overflow: visible !important;
 }
 
@@ -102,7 +100,7 @@ table
 	list-style-type: disc;
 	display: list-item;
 	margin-bottom: .05%;
-	font-size: 1.5vw;
+	font-size: 1.25vw;
 	overflow: visible !important;
 }
 
@@ -110,14 +108,14 @@ table
 #calendarHeaderText > li > b
 {
 	display: inline-block;
-	font-size: 1.5vw;
+	font-size: 1.25vw;
 }
 
 /* Text that is contained in the header of the calendar and is Italic */
 #calendarHeaderText > li > i
 {
 	display: inline-block;
-	font-size: 1.5vw;
+	font-size: 1.25vw;
 }
 
 /* Last piece of header text */
@@ -125,7 +123,7 @@ table
 {
 	display: list-item;
 	margin-bottom: auto;
-	font-size: 1.5vw;
+	font-size: 1.25vw;
 }
 
 
@@ -146,7 +144,8 @@ table
 {
 	text-align: center;
 	display: flex;
-	border-width: .25vw .25vw .25vw 0;
+	border-width: .3vw;
+	border-left-width: 0;
 	border-style: solid;
 	border-color: black;
 	list-style: none;
@@ -158,18 +157,20 @@ table
 #columnHeaders > li:last-child
 {
 	display: flex;
-	border-width: .25vw 0 .25vw 0;
+	border-width: .3vw;
+	border-left-width: 0;
+	border-right-width: 0 !important;
 }
 
 /* The text in the column headers */
 #columnHeaders > li > h1
 {
-	display: block;
+	display: flex;
 	margin: 0 auto;
 	padding: 0;
 	font-weight: bold;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 1.25vw;
 }
 
 /* The section of the calendar with the date boxes */
@@ -196,10 +197,13 @@ table
 }
 
 /* Each day */
-.calendarRow  > li
+.calendarRow > li
 {
+	color: #303030;
 	display: block;
-	border-width: 0 .25vw .25vw 0;
+	border-width: .3vw;
+	border-top-width: 0;
+	border-left-width: 0;
 	border-style: solid;
 	border-color: black;
 	list-style: none;
@@ -209,37 +213,54 @@ table
 }
 
 /* The last column of dates */
-.calendarRow  > li:last-child
+.calendarRow > li:last-child 
 {
-	display: block;
-	border-width: 0 0 .25vw 0;
+	border-width: .3vw;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0 !important;
 }
+
+/* The last row of dates */
+.calendarRow:last-child > li 
+{ 
+	border-width: .3vw;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-bottom-width: 0;
+}
+
 
 /* The number that lists what the date is */
 .calendarRow > li > h1
 {
 	display: block;
-	font-size: 2vw;
-	margin: .5vw;
+	font-size: 1.25vw;
+	margin-bottom: .25vw;
 	padding: 0;
 	text-decoration: underline;
 	word-wrap: break-word;
 }
 
+.calendarRow > li > h1
+{
+	padding: 0 1.5% 1% 1.5%;
+}
+
 /* The text listing what event is happening that day (Strikes, Blocks, Kicks!) */
 .eventText > h2
 {
-	display: block !important;
+	display: block;
 	text-align: center;
-	font-size: 1.75vw;
-	margin: 0;
+	font-size: 1.25vw;
 	padding: 0;
 	word-wrap: break-word;
 }
 
 .eventText
 {
-	margin: 0 .5%;
 	display: block;
-	margin-bottom: 1%;
 }
+
+/* Displays breaks that are in the calendar event text */
+h2 > br { display: block; }
