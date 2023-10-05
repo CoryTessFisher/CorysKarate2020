@@ -4,6 +4,7 @@
 	/* Makes the calendar background image visable when printing */
 	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
 	color-adjust: exact !important;                 /* Firefox */
+	box-sizing: border-box;
 	display: contents;                              /* Hides everything without an expicitly stated display attribute */
 }
 
@@ -32,10 +33,12 @@ span { display: none; }
 /* Places the calendar in the correct part of the calendar box */
 #calendar
 {
+	width: calc(100% - .3vw);
+	height: calc(100% - .3vw);
 	border-width: .3vw !important;
 	border-color: black;
 	border-style: solid;
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	display: flex;
 	align-content: flex-end;
