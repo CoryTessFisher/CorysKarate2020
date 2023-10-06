@@ -296,7 +296,7 @@ function SetMonthText(monthInt, yearInt)
 		case 8: textString += "August"; break;
 		case 9: textString += "September"; break;
 		case 10: textString += "October"; break;
-		case 11: textString += "Novemeber"; break;
+		case 11: textString += "November"; break;
 		case 12: textString += "December"; break;
 		default: textString += "Jaiden messed up the code for this.";  //This would show up if I ever made mistakes.
 	}
